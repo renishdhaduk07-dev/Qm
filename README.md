@@ -115,7 +115,30 @@ Create a `.env` file in the project root:
 GEMINI_API_KEY=your-actual-api-key
 ```
 
-### 2. Install dependencies
+### 2. Create and activate a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it:
+
+- **Windows (PowerShell):**
+  ```powershell
+  .venv\Scripts\Activate.ps1
+  ```
+- **Windows (CMD):**
+  ```cmd
+  .venv\Scripts\activate.bat
+  ```
+- **macOS / Linux:**
+  ```bash
+  source .venv/bin/activate
+  ```
+
+You should see `(.venv)` in your terminal prompt once activated.
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -123,7 +146,7 @@ pip install -r requirements.txt
 
 Dependencies: FastAPI, Uvicorn, LangGraph, LangChain-Google-GenAI, Shapely, Pydantic v2, python-dotenv, Streamlit, Matplotlib, Requests.
 
-### 3. Start the backend
+### 4. Start the backend
 
 ```bash
 cd backend
@@ -132,9 +155,9 @@ uvicorn app.main:app --reload
 
 API available at `http://localhost:8000`.
 
-### 4. Start the frontend
+### 5. Start the frontend
 
-In a separate terminal:
+In a separate terminal (with the venv activated):
 
 ```bash
 cd frontend
