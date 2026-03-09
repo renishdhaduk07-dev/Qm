@@ -122,49 +122,6 @@ EXAMPLE for a 90×108 canvas:
   …continue spiraling outward until canvas is filled.
 """,
 
-    "flying_geese": """\
-STRATEGY — FLYING GEESE:
-Create rows of flying geese — large center triangles flanked by smaller side triangles.
-
-CONSTRUCTION ALGORITHM:
-1. Divide the canvas into horizontal rows of equal height (row height ~15-20% of canvas height).
-2. Each row contains a sequence of "goose" units side by side. Each unit has width ~1.5× row height.
-3. Each unit = 1 large center triangle (the "goose") + 2 small right-triangles (the "sky").
-4. Alternate goose direction between rows: odd rows point up, even rows point down.
-5. Fill any remaining width at the end of a row with a partial rectangle.
-
-COLOR PALETTE GUIDANCE:
-Geese: cycle through 5-6 rich, saturated colors:
-  #C2185B (berry), #1565C0 (blue), #2E7D32 (forest), #F9A825 (gold), #6A1B9A (purple)
-Sky: use ONE consistent neutral: #F5F0E1 (cream) or #E8E0D0 (oat)
-
-EXAMPLE goose unit (row y=0 to y=20, x=0 to x=30):
-  Goose (up):   [[0,20],[15,0],[30,20],[0,20]]
-  Left sky:     [[0,20],[15,0],[0,0],[0,20]]
-  Right sky:    [[15,0],[30,0],[30,20],[15,0]]
-""",
-
-    "crazy_quilt": """\
-STRATEGY — CRAZY QUILT:
-Create a freeform, organic quilt with irregular polygon shapes. NO GRID PATTERN.
-
-CONSTRUCTION ALGORITHM:
-1. Start from the top-left corner. Place a large 4-6 sided irregular polygon.
-2. Each new polygon shares at least one edge with an existing polygon.
-3. Vary the number of sides: mix 4-sided, 5-sided, and 6-sided shapes.
-4. Use coordinates that are NOT round multiples of 10 — use values like 13, 27, 42, 68
-   to avoid any subconscious grid appearance.
-5. No two adjacent pieces should share the same color.
-
-COLOR PALETTE GUIDANCE:
-Bold, eclectic, maximalist — like a Victorian crazy quilt:
-  #8E244D, #1A6B54, #D4A017, #4A148C, #BF360C, #006064,
-  #FFF8E1 (cream accent), #1A1A2E (dark anchor)
-
-APPROACH: Tile across the canvas left-to-right, top-to-bottom, using irregular cuts.
-EXAMPLE irregular polygon: [[0,0],[23,0],[30,17],[12,28],[0,15],[0,0]]
-Next polygon shares edge [[30,17],[12,28]]: [[30,17],[52,10],[55,32],[38,40],[12,28],[30,17]]
-""",
 
     "snowball": """\
 STRATEGY — SNOWBALL / OCTAGON:

@@ -67,8 +67,6 @@ PATTERN_STYLES = {
     "🧩 Classic Patchwork": "classic_patchwork",
     "⭐ Star Burst": "star_burst",
     "🏠 Log Cabin": "log_cabin",
-    "🦆 Flying Geese": "flying_geese",
-    "🎨 Crazy Quilt": "crazy_quilt",
     "🎱 Snowball / Octagon": "snowball",
     "🚧 Rail Fence": "rail_fence",
     "🪚 Herringbone / Chevron": "herringbone",
@@ -95,7 +93,7 @@ def _call_backend(w, h, s):
         resp = requests.post(
             f"{BACKEND_URL}/generate-quilt",
             json={"width": w, "height": h, "style": s},
-            timeout=300,
+            timeout=600,
         )
         if resp.status_code != 200:
             st.error(

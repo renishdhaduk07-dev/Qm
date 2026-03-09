@@ -26,8 +26,6 @@ START → Prompt Builder → Gemini Generator → Validator ─┬─→ Rendere
 | 🧩 Classic Patchwork | `classic_patchwork` |
 | ⭐ Star Burst | `star_burst` |
 | 🏠 Log Cabin | `log_cabin` |
-| 🦆 Flying Geese | `flying_geese` |
-| 🎨 Crazy Quilt | `crazy_quilt` |
 | 🎱 Snowball / Octagon | `snowball` |
 | 🚧 Rail Fence | `rail_fence` |
 | 🪚 Herringbone / Chevron | `herringbone` |
